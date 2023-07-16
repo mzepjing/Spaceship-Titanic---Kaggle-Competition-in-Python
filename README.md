@@ -1,40 +1,29 @@
 # Spaceship-Titanic---Kaggle-Competition-in-Python
 
 
-# Introduction
+# Project Summary
 
-The Spaceship Titanic dataset was not easy to work with at the beginning, this is because the test and train sets didn’t have the same columns, in fact, the test was missing the independent variable, “Transported”. That said, we first had to clean the train set by dealing with missing values as well as transforming categorical variables into 1 and 0. And did the same for the test set.
+## Business Challenge II - Spaceship Titanic
 
-In addition, to adjust the scale of variables as well as to deal with skewness we executed logarithmic transformation and standardization for some of the variables.
+### Introduction
+The Spaceship Titanic dataset analysis aims to predict which passengers were transported to an alternate dimension during the spaceship's collision. The dataset required cleaning and transformation to handle missing values and categorical variables. Feature engineering was performed to create new variables and analyze trends between independent variables and the dependent variable (Transported). Various machine learning models were developed and evaluated to identify the best performing model for prediction.
 
-This allowed us to have the database ready, and from that point on, 9 models were applied in order to find the one that predicted “Transported” the best, which ended up being the StackingClassifier model.
+### Dataset Exploration
+- The dataset was cleaned and transformed to handle missing values and categorical variables.
+- Feature engineering was performed to create new variables.
+- Initial insights were gained regarding passenger behavior, popular destinations, and correlations between variables.
 
+### Feature Engineering
+- New variables were developed to capture relevant information and improve prediction accuracy.
+- Trend-based features were analyzed to understand the relationship between independent variables and the dependent variable (Transported).
 
+### Model Development
+- Multiple machine learning models were developed and evaluated to predict passenger transportation.
+- Models such as DecisionTreeClassifier, RandomForestClassifier, HistGradientBoostingClassifier, and StackingClassifier were employed.
+- Evaluation metrics, including accuracy scores and confusion matrices, were used to assess model performance.
 
-# Index
-
-Dataset Exploration
-
-* Importing libraries
-* Setting Pandas print options
-* Loading dataset
-* Exploring dataset
-
-
-Feature Engineering
-
-* Developing new variables
-* Trend-Based Features between the dependent variable (Transported) and independent variables 
-
-
-
-Model Development
-
-* Plotting predictions
-* Developing candidate statmodels (chechking R-squared, p-values and correlations)
-* Final Models 
-    * KNeighborsClassifier
-    * RandomForestClassifier
-    * AGradientBoostingClassifier
-    * Tunned KNeighborsClassifier
-    * HistGradientBoostingClassifier
+### Conclusion
+- The analysis provided insights into passenger behavior and trends related to transportation.
+- The best performing model was the StackingClassifier with a testing accuracy of 0.8068.
+- False negatives (missed predictions of transported passengers) were identified as a more critical concern than false positives.
+- The analysis can assist in improving safety measures and emergency response protocols in similar disaster scenarios.
